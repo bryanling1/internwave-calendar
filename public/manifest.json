@@ -1,0 +1,12 @@
+{
+    "name": "Calendar", 
+    "image": "logo.png", 
+    "originURL": "https://github.com/bryanling1/internwave-calendar", 
+    "lastUpdated": 1722264922095,
+    "main": "index.js",
+    "API": {
+        "JobTable": {
+            "label": "Events"
+        }
+    }
+}

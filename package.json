@@ -1,0 +1,17 @@
+{
+  "name": "scrapers-api",
+  "version": "1.0.0",
+  "description": "A helper API for web scrapers in the InternWave desktop application",
+  "main": "./build/index.js",
+  "scripts": {
+    "build": "tsup --publicDir --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.5.2"
+  },
+  "dependencies": {
+    "tsup": "^8.2.4"
+  }
+}
