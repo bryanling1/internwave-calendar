@@ -5,7 +5,7 @@
   "main": "./build/index.js",
   "scripts": {
     "build": "tsup --publicDir --watch",
-    "test": "jest"
+    "test": "vitest"
   },
   "author": "",
   "license": "ISC",

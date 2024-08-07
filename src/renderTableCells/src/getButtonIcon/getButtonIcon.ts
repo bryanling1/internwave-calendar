@@ -1,12 +1,25 @@
-import { ITableCellButtonIcon } from "@internwave/extensions-api";
+import { ITableCellButtonIcon, TableCellButtonIcon } from "@internwave/extensions-api";
 import { INote } from "../../../db/types/Note";
-import { getIconType } from "./src/getIconType/getIconType";
+import { getIconTypeFromNote } from "./src/getIconType/getIconType";
+import { getCalendarIconColor } from "./src/getCalendarIconColor/getCalendarIconColor";
 
-export const getButtonIcon = (
+export const getButtonIconFromNote = (
     note: INote
 ): ITableCellButtonIcon => {
     return {
-        type: getIconType(note),
-        color: 'red'
+        type: getIconTypeFromNote(note),
+        color: getCalendarIconColor(note.startDate, note.endDate)
+    }
+}
+
+export const getButtonIcon = (
+    type: TableCellButtonIcon,
+    color?: string,
+    text?: string
+): ITableCellButtonIcon => {
+    return {
+        type,
+        color,
+        text
     }
 }
