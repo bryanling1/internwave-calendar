@@ -1,4 +1,4 @@
-import { ITableCellElement, ITableCellIconButton, TableCellButtonIcon, TableCellElementType } from "@internwave/extensions-api";
+import { ITableCellElement, ITableCellIconButton, Icons, TableCellElementType } from "@internwave/extensions-api";
 import { ButtonId } from "../types/ButtonId";
 
 export const getTrailingButtons = (
@@ -10,7 +10,7 @@ export const getTrailingButtons = (
         type: TableCellElementType.IconButton,
         id: ButtonId.ADD,
         icon: {
-            type: TableCellButtonIcon.ADD
+            type: Icons.ADD
         }
     }
 
@@ -19,7 +19,7 @@ export const getTrailingButtons = (
             type: TableCellElementType.IconButton,
             id: ButtonId.MORE,
             icon: {
-                type: TableCellButtonIcon.CIRCLE,
+                type: Icons.CIRCLE,
                 text: `+${notes - maxNotes}`
             }
         })

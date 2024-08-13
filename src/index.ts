@@ -1,10 +1,12 @@
-import { initExtensionAPI, storeData, fetchData, ITableCell, ITableCellElement, TableCellElementType, TableCellButtonIcon} from "@internwave/extensions-api"
+import { initExtensionAPI } from "@internwave/extensions-api"
 import { onRenderTableCells } from "./renderTableCells/onRenderTableCells"
+import { onCellButtonClick } from "./onButtonClick/onButtonClick"
 
 initExtensionAPI(
     {
         JobTableAPI: {
-            onRenderTableCells
+            onRenderTableCells,
+            onCellButtonClick,
         }
     }
 )

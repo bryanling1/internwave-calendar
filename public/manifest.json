@@ -6,7 +6,7 @@
     "main": "index.js",
     "API": {
         "JobTable": {
-            "label": "Events"
+            "label": "Calendar"
         }
     }
 }

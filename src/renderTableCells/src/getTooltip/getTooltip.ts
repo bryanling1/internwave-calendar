@@ -1,4 +1,4 @@
-import { ITableCellButtonTooltip, ITableCellText } from "@internwave/extensions-api";
+import { ITableCellButtonTooltip, ITypography} from "@internwave/extensions-api";
 import { INote } from "../../../db/types/Note";
 import moment from "moment";
 import { getCalendarIconColor } from "../getButtonIcon/src/getCalendarIconColor/getCalendarIconColor";
@@ -9,11 +9,11 @@ const FORMAT = 'MMMM Do YYYY, h:mm:ss a'
 export const getTooltip = (
     note: INote
 ): ITableCellButtonTooltip => {
-    const title: ITableCellText = {
+    const title: ITypography = {
         text: note.title,
         fontWeight: "bold"
     }
-    const subtitles: ITableCellText[] = []
+    const subtitles: ITypography[] = []
     const startTextText: string | undefined = note.startDate ? 
         `Start: ${moment(note.startDate).format(FORMAT)}` : 
         undefined
