@@ -1,5 +1,5 @@
-import { Color } from "../../../../../styles/Color";
 import moment from "moment";
+import { Color } from "../../../../../../styles/Color";
 
 export const getCalendarIconColor = (
     startDate?: number,

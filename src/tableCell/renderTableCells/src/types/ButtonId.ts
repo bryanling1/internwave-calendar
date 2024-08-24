@@ -1,4 +1,4 @@
 export enum ButtonId {
     ADD = "ADD",
-    MORE = "MORE"
+    MORE = "MORE",
 }

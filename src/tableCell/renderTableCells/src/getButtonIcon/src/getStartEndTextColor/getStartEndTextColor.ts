@@ -1,5 +1,5 @@
-import { Color } from "../../../../../styles/Color";
-import { getCalendarIconColor } from "../getCalendarIconColor/getCalendarIconColor";
+import { getCalendarIconColor } from "src/tableCell/renderTableCells/src/getButtonIcon/src/getCalendarIconColor/getCalendarIconColor";
+import { Color } from "../../../../../../styles/Color";
 import moment from "moment";
 
 export const getStartEndTextColor = (
@@ -9,7 +9,7 @@ export const getStartEndTextColor = (
     startColor: Color | undefined;
     endColor: Color | undefined;
 } => {
-    let startColor = getCalendarIconColor(start, end)
+    const startColor = getCalendarIconColor(start, end)
     let endColor = getCalendarIconColor(end, start)
     if(start !==  undefined && end !== undefined){
         if(moment().isBetween(start, end)){

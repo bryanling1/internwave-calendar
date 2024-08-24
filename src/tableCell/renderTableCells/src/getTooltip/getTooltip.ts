@@ -1,11 +1,9 @@
 import { ITableCellButtonTooltip, ITypography} from "@internwave/extensions-api";
-import { INote } from "../../../db/types/Note";
 import moment from "moment";
-import { getCalendarIconColor } from "../getButtonIcon/src/getCalendarIconColor/getCalendarIconColor";
-import { Color } from "../../../styles/Color";
 import { getStartEndTextColor } from "../getButtonIcon/src/getStartEndTextColor/getStartEndTextColor";
+import { INote } from "src/db/types/Note";
 
-const FORMAT = 'MMMM Do YYYY, h:mm:ss a'
+const FORMAT = 'MMMM Do, h:mm a'
 export const getTooltip = (
     note: INote
 ): ITableCellButtonTooltip => {

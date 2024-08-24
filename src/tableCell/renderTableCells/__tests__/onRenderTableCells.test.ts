@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 import { IJobData } from '../../db/types/JobData';
-import { ITableCell, TableCellButtonIcon, TableCellElementType } from '@internwave/extensions-api';
+import { Icons, ITableCell, TableCellElementType } from '@internwave/extensions-api';
 import { MAX_NOTES, onRenderTableCells } from '../onRenderTableCells';
 import { ButtonId } from '../src/types/ButtonId';
 
@@ -29,7 +29,7 @@ describe('onRenderTableCells', () => {
                     type: TableCellElementType.IconButton,
                     id: ButtonId.ADD,
                     icon: {
-                        type: TableCellButtonIcon.ADD
+                        type: Icons.ADD
                     }
                 }
             ]
@@ -40,7 +40,7 @@ describe('onRenderTableCells', () => {
                     type: TableCellElementType.IconButton,
                     id: ButtonId.ADD,
                     icon: {
-                        type: TableCellButtonIcon.ADD
+                        type: Icons.ADD
                     }
                 }
             ]
@@ -51,7 +51,7 @@ describe('onRenderTableCells', () => {
                     type: TableCellElementType.IconButton,
                     id: ButtonId.ADD,
                     icon: {
-                        type: TableCellButtonIcon.ADD
+                        type: Icons.ADD
                     }
                 }
             ]
@@ -80,7 +80,7 @@ describe('onRenderTableCells', () => {
             type: TableCellElementType.IconButton,
             id: i.toString(),
             icon: {
-                type: TableCellButtonIcon.NOTE,
+                type: Icons.NOTE,
                 color: undefined
             },
             tooltip: {
@@ -97,7 +97,7 @@ describe('onRenderTableCells', () => {
         type: TableCellElementType.IconButton,
         id: ButtonId.ADD,
         icon: {
-            type: TableCellButtonIcon.ADD
+            type: Icons.ADD
         }
     })
     expect(await onRenderTableCells(input)).toStrictEqual(expected)
@@ -118,12 +118,12 @@ describe('onRenderTableCells', () => {
         })
     }
     const expected:ITableCell[] = [{elements: []}]
-    for(let i=0; i<MAX_NOTES + 4; i++){
+    for(let i=0; i<MAX_NOTES; i++){
         expected[0].elements.push({
             type: TableCellElementType.IconButton,
             id: i.toString(),
             icon: {
-                type: TableCellButtonIcon.NOTE,
+                type: Icons.NOTE,
                 color: undefined
             },
             tooltip: {
@@ -140,7 +140,7 @@ describe('onRenderTableCells', () => {
         type: TableCellElementType.IconButton,
         id: ButtonId.MORE,
         icon: {
-            type: TableCellButtonIcon.CIRCLE,
+            type: Icons.CIRCLE,
             text: `+${4}`
         }
     })
@@ -148,7 +148,7 @@ describe('onRenderTableCells', () => {
         type: TableCellElementType.IconButton,
         id: ButtonId.ADD,
         icon: {
-            type: TableCellButtonIcon.ADD
+            type: Icons.ADD
         }
     })
     expect(await onRenderTableCells(input)).toStrictEqual(expected)
