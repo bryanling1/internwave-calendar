@@ -8,7 +8,6 @@ import { notesSort } from "../../utils/Notes/sort";
 export const MAX_NOTES = 3
 export const onRenderTableCells = async (jobsData: IJobData[]) => {
     const out: ITableCell[] = [];
-    console.log("start onRenderTableCells")
     for(const jobData of jobsData){
         const jobElements:ITableCellElement[] = []
         for(const [index, note] of (jobData.extensionData.notes ?? []).sort(notesSort("End", "asc")).entries()){
