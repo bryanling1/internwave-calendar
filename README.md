@@ -1,6 +1,6 @@
 # Calendar Extension for Internwave Desktop
 
-![Demo](G:/uni/uwwave/code/extensions/extensions/internwave-calendar/demo.gif)
+![Demo](https://github.com/bryanling1/internwave-calendar/blob/main/demo.gif?raw=true)
 
 ## Overview
 The **Calendar** extension for Internwave's desktop app enhances your job search experience by allowing you to add notes with start and end dates to job listings. This feature helps you keep track of important dates and deadlines.
